@@ -1,18 +1,13 @@
 package br.com.fynov.model;
 
-/**
- * Representa uma meta financeira (ex.: viagem, reserva de emergência).
- */
 public class Meta {
-
     private Long id;
     private String titulo;
     private Double valorAlvo;
     private Double valorAtual;
     private String prazo;
 
-    public Meta() {
-    }
+    public Meta() {}
 
     public Meta(Long id, String titulo, Double valorAlvo, Double valorAtual, String prazo) {
         this.id = id;
@@ -23,57 +18,23 @@ public class Meta {
     }
 
     public void criarMeta() {
-        // TODO: implementar criação de meta
-        System.out.println("criarMeta() executado");
-    }
-
-    public void atualizarProgresso() {
-        // TODO: implementar atualização do progresso
-        System.out.println("atualizarProgresso() executado");
+        System.out.println("[PLANEJAMENTO] Nova meta '" + this.titulo + "' criada com objetivo de R$ " + this.valorAlvo);
     }
 
     public void verificarProgresso() {
-        // TODO: implementar verificação do progresso (quanto falta, percentual)
-        System.out.println("verificarProgresso() executado");
+        double percentual = (this.valorAtual / this.valorAlvo) * 100;
+        System.out.println("[PLANEJAMENTO] Meta: " + this.titulo + " | Progresso: " + percentual + "% concluído.");
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public Double getValorAlvo() {
-        return valorAlvo;
-    }
-
-    public void setValorAlvo(Double valorAlvo) {
-        this.valorAlvo = valorAlvo;
-    }
-
-    public Double getValorAtual() {
-        return valorAtual;
-    }
-
-    public void setValorAtual(Double valorAtual) {
-        this.valorAtual = valorAtual;
-    }
-
-    public String getPrazo() {
-        return prazo;
-    }
-
-    public void setPrazo(String prazo) {
-        this.prazo = prazo;
-    }
+    // Getters e Setters...
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+    public Double getValorAlvo() { return valorAlvo; }
+    public void setValorAlvo(Double valorAlvo) { this.valorAlvo = valorAlvo; }
+    public Double getValorAtual() { return valorAtual; }
+    public void setValorAtual(Double valorAtual) { this.valorAtual = valorAtual; }
+    public String getPrazo() { return prazo; }
+    public void setPrazo(String prazo) { this.prazo = prazo; }
 }

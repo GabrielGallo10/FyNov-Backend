@@ -1,8 +1,5 @@
 package br.com.fynov.auth;
 
-/**
- * Representa a autenticação do usuário no sistema (credenciais de acesso).
- */
 public class Login {
 
     private String username;
@@ -17,7 +14,6 @@ public class Login {
     }
 
     public void doLogin() {
-        // TODO: implementar lógica de autenticação
         System.out.println("doLogin() executado");
     }
 

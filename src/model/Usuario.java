@@ -1,17 +1,12 @@
 package br.com.fynov.model;
 
-/**
- * Representa o usuário do sistema e suas informações de perfil.
- */
 public class Usuario {
-
     private Long id;
     private String nome;
     private String email;
     private String senha;
 
-    public Usuario() {
-    }
+    public Usuario() {}
 
     public Usuario(Long id, String nome, String email, String senha) {
         this.id = id;
@@ -21,39 +16,16 @@ public class Usuario {
     }
 
     public void exibirPerfil() {
-        // TODO: implementar exibição do perfil
-        System.out.println("exibirPerfil() executado");
+        System.out.println("[SISTEMA] Exibindo perfil do usuário: " + this.nome + " | ID: " + this.id);
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+    // Getters e Setters permanecem os mesmos...
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+    public String getSenha() { return senha; }
+    public void setSenha(String senha) { this.senha = senha; }
 }
