@@ -25,7 +25,7 @@ public class Recebimento {
         System.out.println("[RELATÓRIO] Listando recebimentos da categoria: " + this.categoria);
     }
 
-    // Getters e Setters...
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getData() { return data; }

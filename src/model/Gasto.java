@@ -6,7 +6,7 @@ public class Gasto {
     private String descricao;
     private Double valor;
     private String categoria;
-    private String formaPagamento; // Campo novo para dar um "plus"
+    private String formaPagamento;
 
     public Gasto() {}
 

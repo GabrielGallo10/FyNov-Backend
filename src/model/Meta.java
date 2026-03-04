@@ -26,7 +26,7 @@ public class Meta {
         System.out.println("[PLANEJAMENTO] Meta: " + this.titulo + " | Progresso: " + percentual + "% concluído.");
     }
 
-    // Getters e Setters...
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getTitulo() { return titulo; }
