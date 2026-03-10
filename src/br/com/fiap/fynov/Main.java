@@ -91,8 +91,8 @@ public class Main {
                     System.out.print("Forma de Pagamento: ");
                     String forma = sc.next() + sc.nextLine();
 
-                    Gasto g = new Gasto(1L, "03/03/2026", descGasto, valorGasto, categoriaGastos, forma, usuarioAtivo.getId());
-                    g.registerGasto();
+                    MovimentacaoFinanceira gasto = new Gasto(1L, "03/03/2026", descGasto, valorGasto, categoriaGastos, forma, usuarioAtivo.getId());
+                    gasto.registrar();
                     break;
 
                 case 3:
@@ -103,8 +103,8 @@ public class Main {
                     System.out.print("Categoria: ");
                     String categoriaRec = sc.next() + sc.nextLine();
 
-                    Recebimento r = new Recebimento(1L, "03/03/2026", descRec, valorRec, categoriaRec, usuarioAtivo.getId());
-                    r.registerRecebimento();
+                    MovimentacaoFinanceira recebimento = new Recebimento(1L, "03/03/2026", descRec, valorRec, categoriaRec, usuarioAtivo.getId());
+                    recebimento.registrar();
                     break;
 
                 case 4:
@@ -116,7 +116,9 @@ public class Main {
                     double atual = sc.nextDouble();
 
                     Meta m = new Meta(1L, titulo, alvo, atual, "2026", usuarioAtivo.getId());
+                    m.createMeta();
                     double progresso = m.checkProgress();
+                    System.out.printf("Progresso da meta: %.1f%%%n", progresso);
                     break;
 
                 case 5:
